@@ -1,0 +1,24 @@
+{
+	"files.exclude": {
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.hg": true,
+		"**/CVS": true,
+		"**/.DS_Store": true,
+		"**/*.o": true,
+		"**/*.exe": true,
+	},
+	"files.associations": {
+		"resource_dir.h": "c",
+		"raylib.h": "c",
+		"Settings.h": "c",
+		"laser.h": "c",
+		"stdio.h": "c",
+		"player.h": "c",
+		"fun.h": "c",
+		"raymath.h": "c",
+		"timer.h": "c",
+		"explosion.h": "c",
+		"meteor.h": "c"
+	}
+}

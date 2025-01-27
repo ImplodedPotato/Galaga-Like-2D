@@ -1,0 +1,3 @@
+
+emcc -o index.html main.c -Os -Wall ./../build/external/raylib-master/src/libraylib.a -I. /../build/external/raylib-master/src/raylib.h -L. /../build/external/raylib-master/src/libraylib.a -s USE_GLFW=3 --shell-file ../build/external/raylib-master/src//shell.html -DPLATFORM_WEB
+
