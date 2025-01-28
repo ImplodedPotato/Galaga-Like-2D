@@ -8,6 +8,51 @@ A simple cross platform game built with C and [Raylib](raylib.com)
 * Web
 * Anything raylib Supports!
 
+## To Build For Web: 
+
+You may refer Raylib's offical guide [https://github.com/raysan5/raylib/wiki/Working-for-Web-(HTML5)](https://github.com/raysan5/raylib/wiki/Working-for-Web-(HTML5))
+
+### My Guide
+
+Guide to macOS
+
+1. Clone the repository
+2. Activate Emscripten SDK
+```
+cd ~
+git clone https://github.com/emscripten-core/emsdk.git
+cd emsdk
+/emsdkgit pull
+./emsdk install latest
+./emsdk activate latest
+source ./emsdk_env.sh
+```
+4. Build Raylib:
+
+`cd` into the main project folder
+```
+cd build/external/raylib-master/src
+
+emcc -c rcore.c -Os -Wall -DPLATFORM_WEB -DGRAPHICS_API_OPENGL_ES2
+emcc -c rshapes.c -Os -Wall -DPLATFORM_WEB -DGRAPHICS_API_OPENGL_ES2
+emcc -c rtextures.c -Os -Wall -DPLATFORM_WEB -DGRAPHICS_API_OPENGL_ES2
+emcc -c rtext.c -Os -Wall -DPLATFORM_WEB -DGRAPHICS_API_OPENGL_ES2
+emcc -c rmodels.c -Os -Wall -DPLATFORM_WEB -DGRAPHICS_API_OPENGL_ES2
+emcc -c utils.c -Os -Wall -DPLATFORM_WEB
+emcc -c raudio.c -Os -Wall -DPLATFORM_WEB
+
+emar rcs libraylib.web.a rcore.o rshapes.o rtextures.o rtext.o rmodels.o utils.o raudio.o
+```
+
+This will create the neccessay libray files. Ignore the warnings.
+
+5.  Build Project
+```
+cd ../../../../src
+make PLATFORM=PLATFORM_WEB -B
+```
+
+
 # VSCode Users (all platforms)
 * Clone the Repository
 * Open the folder in VSCode
