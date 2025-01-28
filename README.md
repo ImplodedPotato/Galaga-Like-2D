@@ -51,7 +51,9 @@ This will create the neccessay libray files. Ignore the warnings.
 cd ../../../../src
 make PLATFORM=PLATFORM_WEB -B
 ```
+The web files will then be in the src folder
 
+run `python3 -m htpp.server` and go to [localhost:8000](http://localhost:8000)
 
 # VSCode Users (all platforms)
 * Clone the Repository
