@@ -1,16 +1,15 @@
-# Raylib-Quickstart
-A simple cross platform template for setting up a project with the bleeding edge raylib code.
-Works with C or C++.
+# Galaga-Like-2D
+A simple cross platform game built with C and [Raylib](raylib.com)
 
 ## Supported Platforms
-Quickstart supports the main 3 desktop platforms:
 * Windows
 * Linux
 * MacOS
+* Web
+* Anything raylib Supports!
 
 # VSCode Users (all platforms)
-* Download the quickstart
-* Rename the folder to your game name
+* Clone the Repository
 * Open the folder in VSCode
 * Press F5 to build
 * You are good to go
@@ -86,6 +85,8 @@ If you need to build for a different OpenGL version than the default (OpenGL 3.3
 
 ## For OpenGLES 3.0
 `--graphics=opengles3`
+
+# Template from [raylib-extras](https://github.com/raylib-extras/raylib-quickstart)
 
 # License
 Copyright (c) 2020-2024 Jeffery Myers
